@@ -23,10 +23,12 @@ export default function Home() {
   // Inputted todo name
   const [todoName, setTodoName] = useState("");
 
-  /* 
+  /*  //
     This function creates a todo instance on the database with the help of the Altogic Client Lİbrary db.model().create() function.
     After creating an instance on the database, append the created object to the todos state
   */
+
+    
   const handleAddTodo = async (todoName) => {
     try {
       const { data, errors } = await altogic.db.model("todo").create({
